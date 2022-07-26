@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>깃과 깃허브</title>
+</head>
+<body>
+    <header>
+        <h1>문서 관리자 깃 & 깃허브 관련 명령어</h1>
+    </header>
+    <main>
+        <section class="git">
+            <h2>깃 기본</h2>
+            <ol>
+                <li>
+                    <h3>깃 환경설정</h3>
+                    <code>git config --global user.name "깃허브계정이름"</code><br>
+                    <code>git config --global user.email "깃허브계정주소"</code>
+                    <h4>- 환경설정 제대로 입력됐는지 확인하기 : <code> git config --list </code></h4>
+                </li>
+                <li>
+                    <h3>깃 초기화</h3>
+                    <code>git init</code>
+                </li>
+                <li>
+                    <h3>스테이징하기</h3>
+                    <code>git add "스테이징할 파일명"</code>
+                </li>
+                <li>
+                    <h3>커밋하기</h3>
+                    <code>git commit -m "메세지"</code>
+                    <h4>- 한 번이라도 커밋했으면 스테이징과 커밋을 한 번에 하기 : <code>git commit -am "메세지"</code></h4>
+                    <h4>- 커밋 확인하기 : <code>git log --oneline</code></h4>
+                    <h4>- 깃의 상태 확인하기 : <code>git status</code></h4>
+                    <h4>- 지정한 커밋 해시 이동하기 : <code>git chechout 커밋해시</code></h4>
+                    <h4>- 가장 최근 커밋 취소하기(스테이지로) : <code>git reset HEAD^</code></h4>
+                </li>
+                <li>
+                    <h3>새 브랜치 만들기</h3>
+                    <code>git branch 브랜치이름</code>
+                    <h4>- 브랜치 이동하기 : <code>git checkout 브랜치이름</code></h4>
+                    <h4>★ 브랜치 위치 확인하기 ★ : <code>git branch</code></h4>
+                    <h4>- 브랜치의 커밋 상태 그래프로 보기 : <code>git log --oneline --branch --graph</code></h4>
+                    <h4>- master 브랜치에 다른 브랜치 병합하기 : <code>git merge 병합할 브랜치 이름</code></h4>
+                    <h4>- 병합이 끝난 브랜치 삭제하기 : <code>git branch -d 삭제할 브랜치 이름</code></h4>
+        
+                    <h4>★생성한 브랜치를 깃허브에 푸쉬★ : <code>git push --set-upstream origin 브랜치명</code></h4>
+                </li>
+            </ol>
+        </section>
+        <section class="gitHub">
+            <h2>깃 허브 관련</h2>
+            <ol>
+                <li>
+                    <h3>깃허브 원격저장소에 연결하기</h3>
+                    <code>git remote add origin 복사한 리포지토리주소</code>
+                    <h4>- 원격저장소와 지역저장소의 연결 확인하기 : <code>git remote -v</code> </h4> 
+                    <h4>- 원격저장소에 파일 올리기(푸시하기) : <code>git push -u origin master</code><small>(-u는 처음 한 번만 사용)</small></h4>
+                    <h4>- 원격저장소에 파일 내려받기(풀하기) : <code>git pull origin master</code></h4>
+                    <h4>- 잘못 연결된 깃허브 끊기 : <code>git remote remove origin</code></h4>
+                </li>  
+                <li>
+                    <h3>깃허브 협업하기</h3>
+                    <p>팀장이 깃허브의 기본을 셋팅하고 승인된 공동작업자에게만 커밋할 수 있는 권한을 부여한다.
+                    </p>
+                    <h4>- 깃허브에서 셋팅하기</h4>
+                    <ol>
+                        <li>협업하기 위한 저장소 화면에서 [Setting]를 누른다.</li>
+                        <li>좌측 메뉴의 [Collaborators]를 선택한다.</li>
+                        <li>[Add People]를 누른다.</li>
+                        <li>텍스트 필드에 팀원의 깃허브 아이디나 메일 주소를 입력한 후 버튼을 누른다.</li>
+                        <li>팀원은 협업자로 초대된 메세지 화면(오른쪽 상단 메뉴-Your organizations- Join-accept)에서 수락한다.</li>
+                        <li>각 작업자의 컴퓨터에 지역저장소를 만든다.</li>
+                        <li>각 작업자의 지역저장소와 기본 사용자 환경은 팀장의 환경과 동일하게 설정한다.</li>
+                    </ol>
+                </li>   
+                <li>
+                    <h3>협업을 위한 원격저장소 복제하기</h3>
+                    <code>git clone  복사한 리포지토리주소 저장할 디렉터리</code>
+                </li>       
+            </ol>    
+        </section>
+    </main>
+    <footer>
+        <p>copyright <span class="eunyoung">ⓣLeeEunyoung Teacher</span> All right reserved.</p>
+    </footer>
+</body>
+</html>

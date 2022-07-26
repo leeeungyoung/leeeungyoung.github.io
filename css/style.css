@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+
+header, 
+footer {
+    padding: 2px;
+    background-color: lightblue;
+}
+
+header h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+section h2 {
+    text-indent: 30px;
+    color: blue;
+    background-color:lightgray;
+}
+
+h3 {
+    color: red; /* blueviolet */
+}
+
+h4 {
+    color:cadetblue
+}
+
+p {
+    font-weight: 600;
+    line-height: 30px;
+    color: rgb(254, 72, 0);
+}
+
+code {
+    font-weight: 600;
+    color: darkblue;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer p {
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+}
+
+.eunyoung {
+    color: crimson;
+    font-size: 18px;
+    text-decoration: underline;
+}
