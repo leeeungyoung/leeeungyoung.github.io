@@ -71,10 +71,23 @@
                         <li>협업하기 위한 저장소 화면에서 [Setting]를 누른다.</li>
                         <li>좌측 메뉴의 [Collaborators]를 선택한다.</li>
                         <li>[Add People]를 누른다.</li>
-                        <li>텍스트 필드에 팀원의 깃허브 아이디나 메일 주소를 입력한 후 버튼을 누른다.</li>
-                        <li>팀원은 협업자로 초대된 메세지 화면(오른쪽 상단 메뉴-Your organizations- Join-accept)에서 수락한다.</li>
-                        <li>각 작업자의 컴퓨터에 지역저장소를 만든다.</li>
-                        <li>각 작업자의 지역저장소와 기본 사용자 환경은 팀장의 환경과 동일하게 설정한다.</li>
+                        <li>텍스트 필드에 팀원의 깃허브 아이디나 메일 주소를 입력하여 초대한다.</li>
+                        <li>팀원은 협업자로 초대된 메일을 확인하고 초대를 수락한다.</li>
+                        <li>
+                            <h5 style="font-size: 18px; color: blueviolet">각 작업자의 지역저장소와 기본 사용자 환경은 팀장의 환경과 동일하게 설정한다!</h5>
+                            1) 작업할 폴더 만들기-> 폴더를 비주얼스튜디오코드에서 작업폴더로 선택하기 <br>
+                            2) 설정셋팅하기 <br> 
+                            git init <br>
+                            git config user.name "깃허브계정이름"  -&gt; (공유 계정이름으로.) <br>
+                            git config user.email "깃허브계정주소" -&gt; (공유 계정주소로.) <br>
+                            git remote add origin 공유레포지토리주소 <br>
+                            git remote -v -&gt; (연결확인) <br>
+                            git clone 공유레포지토리주소 <br>
+                            -&gt; 비주얼스튜디오코드에서 자동 생성된 폴더명 열기 <br>
+                            -&gt; 복제한 파일들이 보임 -&gt; 자신의 폴더에 들어가 작업하고 저장하고 스테이징하고 커밋하고 푸시(push)하기 <br>
+
+                            =&gt; 이후 작업부터는 어디서 작업을 시작할 때마다 <span style="color: red; font-weight: bold;">★1) 풀(pull) 2) 작업 3) 푸시(push)하기</span> <br>
+                        </li>
                     </ol>
                 </li>   
                 <li>
